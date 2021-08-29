@@ -8,8 +8,11 @@ app.use(bodyParser.json());
 
 //import routes
 const postsRoute = require('./routes/posts');
+const usersRoute = require('./routes/users');
 
+// Routers that handle requests
 app.use('/posts', postsRoute);
+app.use("/user", usersRoute);
 
 // Routes
 app.get('/', (req, res) => {
